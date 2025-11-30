@@ -1,8 +1,8 @@
 # Basic-Pitch RunPod Worker Dependencies
-# Last updated: 2024-12
+# Optimized for low-resource CPU inference
 
-# Core inference - Spotify's audio-to-MIDI converter
-basic-pitch==0.4.0
+# Core inference - Spotify's audio-to-MIDI converter with ONNX support
+basic-pitch[onnx]==0.4.0
 
 # RunPod serverless SDK
 runpod==1.7.7
