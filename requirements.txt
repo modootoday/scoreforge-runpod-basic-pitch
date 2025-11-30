@@ -1,0 +1,14 @@
+# Basic-Pitch RunPod Worker Dependencies
+# Last updated: 2024-12
+
+# Core inference - Spotify's audio-to-MIDI converter
+basic-pitch==0.4.0
+
+# RunPod serverless SDK
+runpod==1.7.7
+
+# HTTP requests for downloading audio
+requests==2.32.3
+
+# Numerical operations (compatible with basic-pitch 0.4.0)
+numpy==1.26.4
