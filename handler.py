@@ -69,13 +69,19 @@ def handler(event):
             )
 
             # Convert note events to serializable format
+            # note_events format: [start_time, end_time, note_number, amplitude]
             notes = []
             for note in note_events:
+                start_time = float(note[0])
+                end_time = float(note[1])
+                pitch = int(note[2])
+                velocity = int(note[3])  # amplitude already scaled to MIDI velocity
+
                 notes.append({
-                    "pitch": int(note.pitch),
-                    "startTime": float(note.start_time_s),
-                    "duration": float(note.duration_s),
-                    "velocity": int(note.velocity),
+                    "pitch": pitch,
+                    "startTime": start_time,
+                    "duration": end_time - start_time,
+                    "velocity": velocity,
                 })
 
             return {
